@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//Teste commit github
 int main(){
     //Carta 1
     char Estado[4];
@@ -10,7 +10,7 @@ int main(){
     float PIB;
     int PTuristicos;
     
-    //Carta 222
+    //Carta 2
     char Estado2[4];
     char Codigo2[5];
     char Cidade2[20];
