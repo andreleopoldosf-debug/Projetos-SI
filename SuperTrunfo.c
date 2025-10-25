@@ -77,6 +77,8 @@ int main(){
 
     printf("\n");
 
+    /* >>>>>COMENTANDO ESTE TRECHO PARA NÃO TRAZER INFROMAÇÕES DESNECESSÁRIAS AO USUÁRIO, POIS OS ATRIBUTOS SERÃO MOSTRADOS NA COMPARAÇÃO ENTRE AS CARTAS<<<<<
+       >>>>> AINDA ASSIM, QUERO MANTÊ-LO EM MEU CÓDIGO
     //Trazendo as Informações 1
     printf("Dados da Carta 1:\n");
 
@@ -131,16 +133,77 @@ int main(){
     SuperPoder2 =  + Area2 + PIB2 + PTuristicos2 + PIBper2 + (1/Densidade2);
     printf("Super Poder:%.2lf\n", SuperPoder2);
     printf("\n");
+    */
 
     printf(">>> Comparações entre as cartas\n");
-    printf(">>>> Se 1, significa que a carta 1 venceu, se 0 significa que a carta 2 venceu");
-    printf("População: %d\n", Populacao > Populacao2);
-    printf("Área: %d\n", Area > Area2);
-    printf("PIB: %d\n", PIB > PIB2);
-    printf("Pontos Turísticos: %d\n", PTuristicos > PTuristicos2);
-    printf("Densidade: %d\n", Densidade < Densidade2); // menor vence
-    printf("PIB per Capita: %d\n", PIBper > PIBper2);
-    printf("Super Poder: %d\n", SuperPoder > SuperPoder2);
+
+    printf("População de %s: %lu hab\n", Cidade, Populacao);
+    printf("População de %s: %lu hab\n", Cidade2, Populacao2);
+    if(Populacao > Populacao2){
+        printf("População: %s venceu\n", Cidade);
+    } else{
+        printf("População: %s venceu\n",Cidade2);
+    }
+    printf("\n");
+
+    printf("Área de %s: %.2f km²\n", Cidade, Area);
+    printf("Área de %s: %.2f km²\n", Cidade2, Area2);
+    if(Area > Area2){
+        printf("Área: %s venceu\n", Cidade);
+    } else{
+        printf("Área: %s venceu\n",Cidade2);
+    }
+    printf("\n");
+
+    printf("PIB de %s: R$%.2f bilhões\n", Cidade, PIB);
+    printf("PIB de %s: R$%.2f bilhões\n", Cidade2, PIB2);
+    if(PIB > PIB2){
+        printf("PIB: %s venceu\n", Cidade);
+    } else{
+        printf("PIB: %s venceu\n", Cidade2);
+    }
+    printf("\n");
+
+    printf("Pontos Turísticos de %s: %i\n", Cidade, PTuristicos);
+    printf("Pontos Turísticos de %s: %i\n", Cidade2, PTuristicos2);
+    if(PTuristicos > PTuristicos2){
+        printf("Pontos Turísticos: %s venceu\n", Cidade);
+    } else{
+        printf("Pontos Turísticos: %s venceu\n", Cidade2);
+    }
+    printf("\n");
+
+    Densidade = Populacao / Area;
+    printf("Densidade populacional de %s: %.2f hab/km²\n", Cidade, Densidade);
+    Densidade2 = Populacao2 / Area2;
+    printf("Densidade populacional de %s: %.2f hab/km²\n", Cidade2, Densidade2);
+    if(Densidade < Densidade2){ // menor vence
+        printf("Densidade: %s venceu\n", Cidade);
+    } else{
+        printf("Densidade: %s venceu\n", Cidade2);
+    }
+    printf("\n");
+
+    PIBper = (PIB * 1000000000) / Populacao;
+    printf("PIB per Capta de %s: R$%.2lf\n", Cidade, PIBper);
+    PIBper2 = (PIB2 * 1000000000) / Populacao2;
+    printf("PIB per Capta de %s: R$%.2lf\n",Cidade2, PIBper2);
+    if(PIBper > PIBper2){
+        printf("PIB per capita: %s venceu\n", Cidade);
+    } else{
+        printf("PIB per capita: %s venceu\n", Cidade2);
+    }
+    printf("\n");
+
+    SuperPoder = Area + PIB + PTuristicos + PIBper + (1/Densidade);
+    printf("Super Poder de %s: %.2lf\n", Cidade, SuperPoder);
+    SuperPoder2 = Area2 + PIB2 + PTuristicos2 + PIBper2 + (1/Densidade2);
+    printf("Super Poder de %s:%.2lf\n", Cidade2, SuperPoder2);
+    if(SuperPoder > SuperPoder2){
+        printf("Super Poder: %s venceu\n", Cidade);
+    } else{
+        printf("Super Poder: %s venceu\n", Cidade2);
+    }
 
     printf("\n");
 
